@@ -7,3 +7,5 @@
 2. 服务器端可查看访问操作日志,端口可随意更改
 3. 该程序生成一个EXE文件,可直接运行,不依赖IIS,APACHE等WEB服务器(go自带net/http),需要服务器安装subversion并配置一个账号有迁出所有项目的权限
 4. 目前是只支持windows ,因为生成的是BAT文件来执行,linux修改代码生成shell脚本,应该可行,本人未测试
+
+ 谢大beego框架 https://beego.me/
