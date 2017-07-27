@@ -24,14 +24,13 @@ func (this *ExecController) Get() {
 	this.CheckLogin()
 	id := this.GetString("id")
 	if id == "" {
-		//this.Error("参数错误")
+		this.Error("参数错误")
 	}
-	//var info Bat_info
-	//var num int64
-	// info = this.Get_one(id)
-	 //userFile := info.Path + "_id_" + id + ".bat"
-	userFile := "./checkout_bbbc11.sh"
-	out, err := exec.Command("/root/shells/checkout_bbbc11.sh",userFile).Output()
+	var info Bat_info
+	var num int64
+	info = this.Get_one(id)
+	userFile := info.Path + "_id_" + id + ".bat"
+	out, err := exec.Command(userFile).Output()
 	str := string(out)
 	if err != nil {
 		fmt.Println(err)
